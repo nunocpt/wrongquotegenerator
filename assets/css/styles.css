@@ -1,0 +1,134 @@
+/*----- Reset -----*/
+
+html{height: 100px;}
+img,video {max-width: 100%; display: block;}
+*{box-sizing: border-box;}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,figure{margin: 0; padding:0; font-family: 'Quicksand', sans-serif;}
+
+
+
+
+/*----- Main Page -----*/
+
+.iphone{
+	height: 900px;
+	width: 900px;
+	margin: 0px auto;
+	background-image: url('../images/iphone.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+
+.container{
+	position: absolute;
+	z-index: 99999;
+	width: 370px;
+	height: 72%;
+	top: 50%;
+	left: 49.8%;
+	transform: translate(-50%, -50%);
+	margin: auto auto;
+	display: flex;
+
+	background-image: url('../images/intro.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.child_container{
+	width: 80%;
+	margin: auto auto;
+	text-align: center;
+	display: flex;
+	flex-flow: column;
+}
+
+h1{
+	color: white;
+	font-size: 40px;
+	padding-bottom: 5%;
+	text-shadow: 2px 2px 2px rgba(124,255,131,0.5);
+}
+
+p{
+	font-size: 22px;
+	font-weight: 900;
+	color: #DADADA;
+	padding-left: 30%;
+	padding-bottom: 100px;
+	text-shadow: 2px 2px 2px rgba(23,47,24,0.5);
+}
+
+#newQuote{
+	position: fixed;
+	bottom: 7%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	margin: 0px auto;
+	-webkit-box-shadow: 5px 6px 28px -6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 6px 28px -6px rgba(0,0,0,0.75);
+	box-shadow: 5px 6px 28px -6px rgba(0,0,0,0.75);
+	cursor: pointer;
+	transition: 0.3s all ease;
+}
+
+#newQuote:hover{
+	-webkit-box-shadow: 5px 6px 28px -6px rgba(0,0,0,0);
+	-moz-box-shadow: 5px 6px 28px -6px rgba(0,0,0,0);
+	box-shadow: 5px 6px 28px -6px rgba(0,0,0,0);
+}
+
+#newQuote:active {
+  background-color: rgba(0,0,0,0.1);
+}
+
+
+
+
+
+/* ---- Media Queries ---- */
+
+@media only screen and (max-height: 910px) {
+	.iphone{
+		height: 800px;
+		width: 800px;
+	}
+
+	.container{
+		width: 334px;
+	}
+}
+
+@media only screen and (max-height: 770px) {
+	.iphone{
+		height: 700px;
+		width: 700px;
+	}
+
+	.container{
+		width: 295px;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.iphone{
+		height: -1%;
+		width: 100%;
+	}
+
+	.container{
+		width: 79%;
+	}
+
+	h1{font-size: 25px;}
+	p{font-size: 18px;}
+}
+
+
